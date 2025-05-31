@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container header-flex">
       <img src="img/logo/logo.webp" alt="Logo Terranova" class="logo">
       <nav>
@@ -23,6 +23,7 @@
       </nav>
     </div>
   </header>
+  <div class="zocalo-divisor"></div>
   <section class="hero" id="inicio">
     <div class="container">
       <h1>¡Tu Vivienda Prefabricada en Córdoba!</h1>
@@ -334,6 +335,40 @@
         modalImgAmpliada.classList.remove('open');
         document.body.style.overflow = '';
       }
+    });
+    // --- Ocultar header al hacer scroll hacia abajo y mostrar al subir ---
+    let lastScrollY = window.scrollY;
+    let headerVisible = true;
+    window.addEventListener('scroll', function () {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScrollY && currentScroll > 80) {
+        // Scroll hacia abajo
+        document.querySelector('.header').classList.add('header-hide');
+        headerVisible = false;
+      } else {
+        // Scroll hacia arriba
+        document.querySelector('.header').classList.remove('header-hide');
+        headerVisible = true;
+      }
+      lastScrollY = currentScroll;
+    });
+
+    // --- Ajuste de scroll para anclas con header fijo ---
+    document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          const header = document.querySelector('.header');
+          const headerHeight = header.offsetHeight;
+          const targetTop = target.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({
+            top: targetTop - headerHeight - 6, // 6px extra para separación visual
+            behavior: 'smooth'
+          });
+        }
+      });
     });
   </script>
 </body>
