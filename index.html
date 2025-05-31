@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terranova Viviendas Córdoba</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="container header-flex">
+      <img src="img/logo/logo.webp" alt="Logo Terranova" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Modelos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero" id="inicio">
+    <div class="container">
+      <h1>¡Tu Vivienda Prefabricada en Córdoba!</h1>
+      <p>Calidad, rapidez y financiación a tu medida. Descubrí por qué somos líderes en viviendas industrializadas.</p>
+      <a href="#contacto" class="cta-btn">Solicitá tu presupuesto</a>
+    </div>
+  </section>
+  <div class="zocalo-divisor"></div>
+  <section class="slider-section">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="img/1_TerraNova_-11.webp" alt="Vivienda 1" class="slide active">
+        <img src="img/1_TerraNova_-14.webp" alt="Vivienda 2" class="slide">
+        <img src="img/1_TerraNova_-27.webp" alt="Vivienda 3" class="slide">
+        <img src="img/1_TerraNova_-29.webp" alt="Vivienda 4" class="slide">
+        <img src="img/1_TerraNova_-6.webp" alt="Vivienda 5" class="slide">
+      </div>
+      <button class="slider-btn prev">&#10094;</button>
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
+  <section class="marcas-carousel-section">
+    <div class="marcas-carousel-container">
+      <div class="marcas-carousel" id="marcasCarousel">
+        <img src="img/img_marcas/9999999999.jpg" alt="Marca 1">
+        <img src="img/img_marcas/cdf84242035807.jpg" alt="Marca 2">
+        <img src="img/img_marcas/D_NQ_NP_669000-MLA47586899014_092021-O.webp" alt="Marca 3">
+        <img src="img/img_marcas/D_NQ_NP_764116-MLA69820250622_062023-O.webp" alt="Marca 4">
+        <img src="img/img_marcas/images.jpeg" alt="Marca 5">
+        <img src="img/img_marcas/images.png" alt="Marca 6">
+        <img src="img/img_marcas/logo_retak_negro.svg" alt="Marca 7">
+        <img src="img/img_marcas/SICA.webp" alt="Marca 8">
+        <!-- Duplicado para efecto infinito -->
+        <img src="img/img_marcas/9999999999.jpg" alt="Marca 1">
+        <img src="img/img_marcas/cdf84242035807.jpg" alt="Marca 2">
+        <img src="img/img_marcas/D_NQ_NP_669000-MLA47586899014_092021-O.webp" alt="Marca 3">
+        <img src="img/img_marcas/D_NQ_NP_764116-MLA69820250622_062023-O.webp" alt="Marca 4">
+        <img src="img/img_marcas/images.jpeg" alt="Marca 5">
+        <img src="img/img_marcas/images.png" alt="Marca 6">
+        <img src="img/img_marcas/logo_retak_negro.svg" alt="Marca 7">
+        <img src="img/img_marcas/SICA.webp" alt="Marca 8">
+      </div>
+    </div>
+  </section>
+  <section class="modelos" id="servicios">
+    <div class="container">
+      <h2>Modelos Destacados</h2>
+      <div class="modelos-grid">
+        <div class="modelo-card" data-modelo="familiar">
+          <img src="img/1_TerraNova_-11.webp" alt="Modelo 1" class="modelo-img-principal">
+          <h3>Modelo Familiar</h3>
+          <p>Ideal para familias, 2 y 3 dormitorios, diseño moderno y eficiente.</p>
+          <button class="ver-detalle-btn">Ver detalle</button>
+        </div>
+        <div class="modelo-card" data-modelo="compacto">
+          <img src="img/1_TerraNova_-14.webp" alt="Modelo 2" class="modelo-img-principal">
+          <h3>Modelo Compacto</h3>
+          <p>Perfecto para parejas o inversión, bajo mantenimiento y rápido montaje.</p>
+          <button class="ver-detalle-btn">Ver detalle</button>
+        </div>
+        <div class="modelo-card" data-modelo="premium">
+          <img src="img/1_TerraNova_-27.webp" alt="Modelo 3" class="modelo-img-principal">
+          <h3>Modelo Premium</h3>
+          <p>Espacios amplios, terminaciones de alta calidad y personalización total.</p>
+          <button class="ver-detalle-btn">Ver detalle</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="beneficios" id="beneficios">
+    <div class="container">
+      <h2>¿Por qué elegirnos?</h2>
+      <ul class="beneficios-lista">
+        <li>✔️ Entrega rápida y llave en mano</li>
+        <li>✔️ Materiales de primera calidad</li>
+        <li>✔️ Financiación flexible</li>
+        <li>✔️ Garantía escrita</li>
+        <li>✔️ Más de 10 años de experiencia</li>
+      </ul>
+    </div>
+  </section>
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <h2>Contactanos</h2>
+      <form class="form-contacto">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+        <input type="tel" name="telefono" placeholder="Teléfono (opcional)">
+        <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+        <button type="submit">Enviar consulta</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer-flex">
+      <p>&copy; 2025 Terranova Viviendas Córdoba. Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <a href="https://wa.me/5493511234567" class="whatsapp-float" target="_blank" rel="noopener"
+      title="¡Escribinos por WhatsApp!">
+      <img src="img/ico-whats/Whatsapp_icon-icons.com_66931.png" alt="WhatsApp">
+
+    </a>
+  </footer>
+  <!-- Modales de modelos -->
+  <div id="modal-modelo" class="modal-modelo">
+    <div class="modal-modelo-content">
+      <span class="modal-modelo-close">&times;</span>
+      <div class="modal-modelo-slider">
+        <button class="modal-slider-btn prev">&#10094;</button>
+        <img id="modal-modelo-img-slider" src="" alt="Imagen modelo slider" />
+        <button class="modal-slider-btn next">&#10095;</button>
+      </div>
+      <h3 id="modal-modelo-title"></h3>
+      <p id="modal-modelo-desc"></p>
+    </div>
+  </div>
+  <!-- Modal para imagen ampliada -->
+  <div id="modal-img-ampliada" class="modal-img-ampliada">
+    <div class="modal-img-ampliada-content">
+      <span class="modal-img-ampliada-close">&times;</span>
+      <img id="img-ampliada" src="" alt="Imagen ampliada" />
+    </div>
+  </div>
+  <script>
+    // Slider funcionalidad
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.slider-btn.prev');
+    const nextBtn = document.querySelector('.slider-btn.next');
+    let current = 0;
+
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === idx);
+      });
+    }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    // Auto-slide cada 5 segundos
+    setInterval(nextSlide, 5000);
+
+    // Slider infinito marcas
+    const marcasCarousel = document.getElementById('marcasCarousel');
+    let scrollAmount = 0;
+    let marcasWidth = marcasCarousel.scrollWidth / 2;
+    let lastTimestamp = null;
+    const VELOCIDAD = 40; // px por segundo, ajustable
+
+    function animateMarcasSlider(ts) {
+      if (!lastTimestamp) lastTimestamp = ts;
+      const delta = ts - lastTimestamp;
+      lastTimestamp = ts;
+      scrollAmount += (VELOCIDAD * delta) / 1000;
+      if (scrollAmount >= marcasWidth) {
+        marcasCarousel.style.transition = 'none';
+        scrollAmount = 0;
+        marcasCarousel.style.transform = `translateX(0px)`;
+        // Forzar reflow para que el browser aplique el cambio instantáneo
+        void marcasCarousel.offsetWidth;
+        marcasCarousel.style.transition = '';
+      } else {
+        marcasCarousel.style.transform = `translateX(-${scrollAmount}px)`;
+      }
+      requestAnimationFrame(animateMarcasSlider);
+    }
+    if (marcasCarousel) {
+      requestAnimationFrame(animateMarcasSlider);
+    }
+
+    // Modal modelos destacados
+    const modelosData = {
+      familiar: {
+        imgs: [
+          'img/1_TerraNova_-29.webp',
+          'img/1_TerraNova_-11.webp',
+          'img/1_TerraNova_-14.webp'
+        ],
+        title: 'Modelo Familiar',
+        desc: 'El Modelo Familiar está pensado para quienes buscan comodidad y espacio. Cuenta con 2 o 3 dormitorios, living comedor amplio, cocina funcional y baño completo. Ideal para familias que desean crecer en un entorno moderno, seguro y eficiente. Materiales de alta calidad y excelente aislación térmica.'
+      },
+      compacto: {
+        imgs: [
+          'img/1_TerraNova_-29.webp',
+          'img/1_TerraNova_-27.webp',
+          'img/1_TerraNova_-29.webp'
+        ],
+        title: 'Modelo Compacto',
+        desc: 'El Modelo Compacto es perfecto para parejas, personas solas o como inversión. Diseño inteligente que aprovecha cada metro, bajo mantenimiento y rápido montaje. Incluye dormitorio, baño, cocina integrada y espacio de estar. Ideal para lotes pequeños o como casa de fin de semana.'
+      },
+      premium: {
+        imgs: [
+          'img/1_TerraNova_-29.webp',
+          'img/1_TerraNova_-6.webp',
+          'img/1_TerraNova_-14.webp'
+        ],
+        title: 'Modelo Premium',
+        desc: 'El Modelo Premium ofrece espacios generosos, terminaciones de alta gama y la posibilidad de personalizar cada ambiente. Grandes ventanales, suite principal, cocina gourmet y detalles exclusivos. La mejor opción para quienes buscan confort y distinción.'
+      }
+    };
+    const modal = document.getElementById('modal-modelo');
+    const modalImgSlider = document.getElementById('modal-modelo-img-slider');
+    const modalTitle = document.getElementById('modal-modelo-title');
+    const modalDesc = document.getElementById('modal-modelo-desc');
+    const closeModal = document.querySelector('.modal-modelo-close');
+    const prevModalBtn = document.querySelector('.modal-slider-btn.prev');
+    const nextModalBtn = document.querySelector('.modal-slider-btn.next');
+    let sliderImgs = [];
+    let sliderIdx = 0;
+
+    document.querySelectorAll('.ver-detalle-btn').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const modelo = this.closest('.modelo-card').dataset.modelo;
+        const data = modelosData[modelo];
+        sliderImgs = data.imgs;
+        sliderIdx = 0;
+        modalImgSlider.src = sliderImgs[sliderIdx];
+        modalTitle.textContent = data.title;
+        modalDesc.textContent = data.desc;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function showModalImg(idx) {
+      if (!sliderImgs.length) return;
+      sliderIdx = (idx + sliderImgs.length) % sliderImgs.length;
+      modalImgSlider.src = sliderImgs[sliderIdx];
+    }
+    nextModalBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showModalImg(sliderIdx + 1);
+    });
+    prevModalBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showModalImg(sliderIdx - 1);
+    });
+    // Click en la imagen para avanzar
+    modalImgSlider.addEventListener('click', () => {
+      showModalImg(sliderIdx + 1);
+    });
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+    // Función para actualizar la visibilidad de los botones de navegación del slider
+    function updateSliderButtons(totalImages, currentIndex) {
+      if (totalImages <= 1) {
+        prevSliderBtn.style.display = 'none';
+        nextSliderBtn.style.display = 'none';
+      } else {
+        prevSliderBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+        nextSliderBtn.style.display = currentIndex === totalImages - 1 ? 'none' : 'block';
+      }
+    }
+    // --- Navegación del slider en el modal ---
+    prevSliderBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Evitar que el clic cierre el modal
+      const currentIndex = parseInt(modalImgSlider.dataset.current);
+      const newIndex = (currentIndex - 1 + modelosData.familiar.imgs.length) % modelosData.familiar.imgs.length;
+      modalImgSlider.src = modelosData.familiar.imgs[newIndex];
+      modalImgSlider.dataset.current = newIndex;
+      // Actualizar botones
+      updateSliderButtons(modelosData.familiar.imgs.length, newIndex);
+    });
+    nextSliderBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // Evitar que el clic cierre el modal
+      const currentIndex = parseInt(modalImgSlider.dataset.current);
+      const newIndex = (currentIndex + 1) % modelosData.familiar.imgs.length;
+      modalImgSlider.src = modelosData.familiar.imgs[newIndex];
+      modalImgSlider.dataset.current = newIndex;
+      // Actualizar botones
+      updateSliderButtons(modelosData.familiar.imgs.length, newIndex);
+    });
+    // --- Modal imagen ampliada ---
+    const modalImgAmpliada = document.getElementById('modal-img-ampliada');
+    const imgAmpliada = document.getElementById('img-ampliada');
+    const closeImgAmpliada = document.querySelector('.modal-img-ampliada-close');
+    // Delegación para abrir imagen ampliada
+    modalImgSlider.addEventListener('click', function (e) {
+      if (e.target.tagName === 'IMG') {
+        imgAmpliada.src = e.target.src;
+        modalImgAmpliada.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    closeImgAmpliada.addEventListener('click', () => {
+      modalImgAmpliada.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+    modalImgAmpliada.addEventListener('click', (e) => {
+      if (e.target === modalImgAmpliada) {
+        modalImgAmpliada.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+
+</html>
