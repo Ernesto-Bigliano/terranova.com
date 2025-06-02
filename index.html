@@ -7,12 +7,37 @@
   <title>Terranova Viviendas Córdoba</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Metatags SEO y sociales -->
+  <!-- 
+- Los metatags de "description", "keywords" y "author" ayudan a los motores de búsqueda (Google, Bing, etc.) a entender de qué trata tu sitio y a mostrarlo mejor en los resultados.
+- Los metatags "og:" (Open Graph) permiten que, cuando compartas tu sitio en Facebook, WhatsApp u otras redes, se muestre un título, descripción e imagen atractivos.
+- Los metatags "twitter:" hacen lo mismo pero para Twitter/X.
+- Cambia las URLs de las imágenes y del sitio ("https://tusitio.com/") por las reales de tu web para que la vista previa sea correcta.
+- No necesitas hacer nada más: los navegadores y redes sociales los leen automáticamente cuando alguien visita o comparte tu página.
+-->
+  <meta name="description"
+    content="Terranova Viviendas Córdoba - Casas prefabricadas, construcción y venta en Córdoba. Calidad, confianza y atención personalizada.">
+  <meta name="keywords" content="viviendas, casas, prefabricadas, Córdoba, construcción, venta, Terranova">
+  <meta name="author" content="Terranova Viviendas Córdoba">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Terranova Viviendas Córdoba">
+  <meta property="og:description"
+    content="Casas prefabricadas, construcción y venta en Córdoba. Calidad, confianza y atención personalizada.">
+  <meta property="og:image" content="https://tusitio.com/img/og-image.jpg">
+  <meta property="og:url" content="https://tusitio.com/">
+  <meta property="og:type" content="website">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terranova Viviendas Córdoba">
+  <meta name="twitter:description"
+    content="Casas prefabricadas, construcción y venta en Córdoba. Calidad, confianza y atención personalizada.">
+  <meta name="twitter:image" content="https://tusitio.com/img/og-image.jpg">
 </head>
 
 <body>
   <header class="header">
     <div class="container header-flex">
-      <img src="img/logo/logo.webp" alt="Logo Terranova" class="logo">
+      <img src="img/logo/logo.webp" alt="Logo Terranova" class="logo" id="logoTerraNova">
       <nav>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
@@ -152,192 +177,7 @@
       <img id="img-ampliada" src="" alt="Imagen ampliada" />
     </div>
   </div>
-  <script>
-    // Slider funcionalidad
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.slider-btn.prev');
-    const nextBtn = document.querySelector('.slider-btn.next');
-    let current = 0;
-
-    function showSlide(idx) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === idx);
-      });
-    }
-    function nextSlide() {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }
-    function prevSlide() {
-      current = (current - 1 + slides.length) % slides.length;
-      showSlide(current);
-    }
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    // Auto-slide cada 5 segundos
-    setInterval(nextSlide, 5000);
-
-    // Slider infinito marcas
-    const marcasCarousel = document.getElementById('marcasCarousel');
-    let scrollAmount = 0;
-    let marcasWidth = marcasCarousel.scrollWidth / 2;
-    let lastTimestamp = null;
-    const VELOCIDAD = 40; // px por segundo, ajustable
-
-    function animateMarcasSlider(ts) {
-      if (!lastTimestamp) lastTimestamp = ts;
-      const delta = ts - lastTimestamp;
-      lastTimestamp = ts;
-      scrollAmount += (VELOCIDAD * delta) / 1000;
-      if (scrollAmount >= marcasWidth) {
-        marcasCarousel.style.transition = 'none';
-        scrollAmount = 0;
-        marcasCarousel.style.transform = `translateX(0px)`;
-        // Forzar reflow para que el browser aplique el cambio instantáneo
-        void marcasCarousel.offsetWidth;
-        marcasCarousel.style.transition = '';
-      } else {
-        marcasCarousel.style.transform = `translateX(-${scrollAmount}px)`;
-      }
-      requestAnimationFrame(animateMarcasSlider);
-    }
-    if (marcasCarousel) {
-      requestAnimationFrame(animateMarcasSlider);
-    }
-
-    // Modal modelos destacados
-    const modelosData = {
-      familiar: {
-        imgs: [
-          'img/1_TerraNova_-29.webp',
-          'img/1_TerraNova_-11.webp',
-          'img/1_TerraNova_-14.webp'
-        ],
-        title: 'Modelo Familiar',
-        desc: 'El Modelo Familiar está pensado para quienes buscan comodidad y espacio. Cuenta con 2 o 3 dormitorios, living comedor amplio, cocina funcional y baño completo. Ideal para familias que desean crecer en un entorno moderno, seguro y eficiente. Materiales de alta calidad y excelente aislación térmica.'
-      },
-      compacto: {
-        imgs: [
-          'img/1_TerraNova_-29.webp',
-          'img/1_TerraNova_-27.webp',
-          'img/1_TerraNova_-29.webp'
-        ],
-        title: 'Modelo Compacto',
-        desc: 'El Modelo Compacto es perfecto para parejas, personas solas o como inversión. Diseño inteligente que aprovecha cada metro, bajo mantenimiento y rápido montaje. Incluye dormitorio, baño, cocina integrada y espacio de estar. Ideal para lotes pequeños o como casa de fin de semana.'
-      },
-      premium: {
-        imgs: [
-          'img/1_TerraNova_-29.webp',
-          'img/1_TerraNova_-6.webp',
-          'img/1_TerraNova_-14.webp'
-        ],
-        title: 'Modelo Premium',
-        desc: 'El Modelo Premium ofrece espacios generosos, terminaciones de alta gama y la posibilidad de personalizar cada ambiente. Grandes ventanales, suite principal, cocina gourmet y detalles exclusivos. La mejor opción para quienes buscan confort y distinción.'
-      }
-    };
-    const modal = document.getElementById('modal-modelo');
-    const modalImgSlider = document.getElementById('modal-modelo-img-slider');
-    const modalTitle = document.getElementById('modal-modelo-title');
-    const modalDesc = document.getElementById('modal-modelo-desc');
-    const closeModal = document.querySelector('.modal-modelo-close');
-    const prevModalBtn = document.querySelector('.modal-slider-btn.prev');
-    const nextModalBtn = document.querySelector('.modal-slider-btn.next');
-    let sliderImgs = [];
-    let sliderIdx = 0;
-
-    document.querySelectorAll('.ver-detalle-btn').forEach(btn => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const modelo = this.closest('.modelo-card').dataset.modelo;
-        const data = modelosData[modelo];
-        sliderImgs = data.imgs;
-        sliderIdx = 0;
-        modalImgSlider.src = sliderImgs[sliderIdx];
-        modalTitle.textContent = data.title;
-        modalDesc.textContent = data.desc;
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    function showModalImg(idx) {
-      if (!sliderImgs.length) return;
-      sliderIdx = (idx + sliderImgs.length) % sliderImgs.length;
-      modalImgSlider.src = sliderImgs[sliderIdx];
-    }
-    nextModalBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showModalImg(sliderIdx + 1);
-    });
-    prevModalBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showModalImg(sliderIdx - 1);
-    });
-    // Click en la imagen para avanzar
-    modalImgSlider.addEventListener('click', () => {
-      showModalImg(sliderIdx + 1);
-    });
-    closeModal.addEventListener('click', () => {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    });
-    // Función para actualizar la visibilidad de los botones de navegación del slider
-    function updateSliderButtons(totalImages, currentIndex) {
-      if (totalImages <= 1) {
-        prevSliderBtn.style.display = 'none';
-        nextSliderBtn.style.display = 'none';
-      } else {
-        prevSliderBtn.style.display = currentIndex === 0 ? 'none' : 'block';
-        nextSliderBtn.style.display = currentIndex === totalImages - 1 ? 'none' : 'block';
-      }
-    }
-    // --- Navegación del slider en el modal ---
-    prevSliderBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Evitar que el clic cierre el modal
-      const currentIndex = parseInt(modalImgSlider.dataset.current);
-      const newIndex = (currentIndex - 1 + modelosData.familiar.imgs.length) % modelosData.familiar.imgs.length;
-      modalImgSlider.src = modelosData.familiar.imgs[newIndex];
-      modalImgSlider.dataset.current = newIndex;
-      // Actualizar botones
-      updateSliderButtons(modelosData.familiar.imgs.length, newIndex);
-    });
-    nextSliderBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Evitar que el clic cierre el modal
-      const currentIndex = parseInt(modalImgSlider.dataset.current);
-      const newIndex = (currentIndex + 1) % modelosData.familiar.imgs.length;
-      modalImgSlider.src = modelosData.familiar.imgs[newIndex];
-      modalImgSlider.dataset.current = newIndex;
-      // Actualizar botones
-      updateSliderButtons(modelosData.familiar.imgs.length, newIndex);
-    });
-    // --- Modal imagen ampliada ---
-    const modalImgAmpliada = document.getElementById('modal-img-ampliada');
-    const imgAmpliada = document.getElementById('img-ampliada');
-    const closeImgAmpliada = document.querySelector('.modal-img-ampliada-close');
-    // Delegación para abrir imagen ampliada
-    modalImgSlider.addEventListener('click', function (e) {
-      if (e.target.tagName === 'IMG') {
-        imgAmpliada.src = e.target.src;
-        modalImgAmpliada.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-    closeImgAmpliada.addEventListener('click', () => {
-      modalImgAmpliada.classList.remove('open');
-      document.body.style.overflow = '';
-    });
-    modalImgAmpliada.addEventListener('click', (e) => {
-      if (e.target === modalImgAmpliada) {
-        modalImgAmpliada.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>
